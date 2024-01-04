@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie List Table View Controller-->
+        <scene sceneID="Lly-Ks-cda">
+            <objects>
+                <tableViewController storyboardIdentifier="MovieListTableViewController" id="Cfy-gr-84n" customClass="MovieListTableViewController" customModule="LanguageDiplomApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aDB-8o-nle">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mWf-Tr-74h">
+                            <rect key="frame" x="0.0" y="559.33333206176758" width="428" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="EXIT">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="exitButtonPressed:" destination="Cfy-gr-84n" eventType="touchUpInside" id="sDv-Q2-xVo"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="492" id="dwp-cD-1KA" customClass="MovieListTableViewCell" customModule="LanguageDiplomApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="492"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dwp-cD-1KA" id="2TB-wM-etR">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="492"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOs-8g-nQv">
+                                            <rect key="frame" x="13.999999999999993" y="448" width="107.33333333333331" height="19.666666666666686"/>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genras:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBp-Ha-T9O">
+                                            <rect key="frame" x="14.666666666666664" y="427" width="67.666666666666686" height="18.333333333333314"/>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEK-zs-TBT">
+                                            <rect key="frame" x="90" y="426" width="338" height="20.333333333333314"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="338" id="Lax-OG-y7e"/>
+                                                <constraint firstAttribute="height" constant="20.333333333333314" id="cxy-3n-yyY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="10"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZv-30-i8V">
+                                            <rect key="frame" x="15" y="400" width="66" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="66" id="ayF-cG-9CB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movieName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItX-DM-tKB">
+                                            <rect key="frame" x="20" y="362.33333333333331" width="388" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="J34-sp-G9h"/>
+                                                <constraint firstAttribute="width" constant="388" id="N9b-Xf-Q5B"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="26"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOs-86-Bqd">
+                                            <rect key="frame" x="89" y="402" width="60" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="QmE-2X-69d"/>
+                                                <constraint firstAttribute="width" constant="60" id="ouq-Fj-Cc9"/>
+                                                <constraint firstAttribute="height" constant="22" id="yKx-Bg-39q"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-NY-aK2">
+                                            <rect key="frame" x="0.0" y="-4.3333333333333428" width="428" height="362.99999999999994"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="428" id="Ntl-dG-MFB"/>
+                                                <constraint firstAttribute="height" constant="416.32999999999998" id="usp-RE-Ylb"/>
+                                            </constraints>
+                                            <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36i-6b-JXi">
+                                            <rect key="frame" x="0.0" y="491.66666666666669" width="428" height="0.33333333333331439"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap on poster to read description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMk-va-9gM">
+                                            <rect key="frame" x="126" y="450.33333333333331" width="250" height="15"/>
+                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="14"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="2gh-NY-aK2" firstAttribute="top" secondItem="2TB-wM-etR" secondAttribute="top" id="1Or-j7-EJJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rMk-va-9gM" secondAttribute="trailing" constant="32" id="1Qz-Oh-wgp"/>
+                                        <constraint firstItem="ItX-DM-tKB" firstAttribute="top" secondItem="2gh-NY-aK2" secondAttribute="bottom" constant="7" id="7qG-LK-sAZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="2gh-NY-aK2" secondAttribute="trailing" id="8UG-jQ-6AJ"/>
+                                        <constraint firstItem="LOs-86-Bqd" firstAttribute="top" secondItem="ItX-DM-tKB" secondAttribute="bottom" constant="7.6699999999999999" id="A1F-Lj-yJ3"/>
+                                        <constraint firstItem="rMk-va-9gM" firstAttribute="firstBaseline" secondItem="aOs-8g-nQv" secondAttribute="firstBaseline" id="C2V-RC-AJn"/>
+                                        <constraint firstItem="lZv-30-i8V" firstAttribute="centerY" secondItem="LOs-86-Bqd" secondAttribute="centerY" id="G9U-tp-hT9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ItX-DM-tKB" secondAttribute="trailing" id="HOt-ic-Gtw"/>
+                                        <constraint firstItem="2gh-NY-aK2" firstAttribute="leading" secondItem="2TB-wM-etR" secondAttribute="leading" id="HoA-V7-ZlY"/>
+                                        <constraint firstItem="lZv-30-i8V" firstAttribute="top" secondItem="2gh-NY-aK2" secondAttribute="bottom" constant="44.666666666666629" id="JMQ-Hd-qcG"/>
+                                        <constraint firstItem="DEK-zs-TBT" firstAttribute="top" secondItem="LOs-86-Bqd" secondAttribute="bottom" constant="2" id="Ksd-Y3-sWj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LOs-86-Bqd" secondAttribute="trailing" constant="259" id="KyK-8x-osQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="36i-6b-JXi" secondAttribute="trailing" id="L2P-MT-ibV"/>
+                                        <constraint firstItem="DEK-zs-TBT" firstAttribute="centerY" secondItem="rBp-Ha-T9O" secondAttribute="centerY" id="SW3-AF-8tx"/>
+                                        <constraint firstItem="LOs-86-Bqd" firstAttribute="leading" secondItem="lZv-30-i8V" secondAttribute="trailing" constant="8" symbolic="YES" id="UHO-d2-KBh"/>
+                                        <constraint firstItem="ItX-DM-tKB" firstAttribute="leading" secondItem="2TB-wM-etR" secondAttribute="leadingMargin" id="UyM-S5-Hdx"/>
+                                        <constraint firstItem="ItX-DM-tKB" firstAttribute="top" secondItem="2gh-NY-aK2" secondAttribute="bottom" constant="7" id="Vgz-nM-Ysz"/>
+                                        <constraint firstItem="rBp-Ha-T9O" firstAttribute="top" secondItem="lZv-30-i8V" secondAttribute="bottom" constant="1" id="X5m-Sg-H4e"/>
+                                        <constraint firstItem="2gh-NY-aK2" firstAttribute="centerX" secondItem="2TB-wM-etR" secondAttribute="centerX" id="Yd3-HQ-zT4"/>
+                                        <constraint firstItem="LOs-86-Bqd" firstAttribute="top" secondItem="ItX-DM-tKB" secondAttribute="bottom" constant="7.6699999999999999" id="Z4b-fS-liz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="DEK-zs-TBT" secondAttribute="trailing" constant="-20" id="azf-04-2N7"/>
+                                        <constraint firstItem="rMk-va-9gM" firstAttribute="centerY" secondItem="aOs-8g-nQv" secondAttribute="centerY" id="biV-ga-EDK"/>
+                                        <constraint firstItem="36i-6b-JXi" firstAttribute="top" secondItem="aOs-8g-nQv" secondAttribute="bottom" constant="24" id="dHM-4o-R3d"/>
+                                        <constraint firstItem="aOs-8g-nQv" firstAttribute="top" secondItem="DEK-zs-TBT" secondAttribute="bottom" constant="1.6666666666666856" id="enr-Yh-HAY"/>
+                                        <constraint firstItem="DEK-zs-TBT" firstAttribute="leading" secondItem="rBp-Ha-T9O" secondAttribute="trailing" constant="7.6666666666666572" id="kGg-z2-Wlo"/>
+                                        <constraint firstAttribute="bottom" secondItem="36i-6b-JXi" secondAttribute="bottom" id="oKJ-QI-mHz"/>
+                                        <constraint firstItem="36i-6b-JXi" firstAttribute="leading" secondItem="2TB-wM-etR" secondAttribute="leading" id="qnq-CG-UpD"/>
+                                        <constraint firstItem="rMk-va-9gM" firstAttribute="leading" secondItem="aOs-8g-nQv" secondAttribute="trailing" constant="4.6666666666666856" id="vsb-IF-Ss1"/>
+                                        <constraint firstAttribute="bottom" secondItem="DEK-zs-TBT" secondAttribute="bottom" constant="45.666666666666686" id="zN4-Qr-y3s"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <connections>
+                                    <outlet property="genrasLabel" destination="DEK-zs-TBT" id="Y7o-8T-7MC"/>
+                                    <outlet property="movieImage" destination="2gh-NY-aK2" id="tvD-YN-F46"/>
+                                    <outlet property="movieNameLabel" destination="ItX-DM-tKB" id="SZf-Gc-Mt4"/>
+                                    <outlet property="ratingLabel" destination="LOs-86-Bqd" id="qU1-bz-FDE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cfy-gr-84n" id="fNo-Zc-9Pq"/>
+                            <outlet property="delegate" destination="Cfy-gr-84n" id="N6e-r4-Fub"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="cpT-ka-BGg" kind="presentation" identifier="descripionSegue" modalPresentationStyle="overCurrentContext" id="8rw-HC-Asa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38H-gP-m0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199.06542056074764" y="71.274298056155516"/>
+        </scene>
+        <!--Description-->
+        <scene sceneID="tIi-gm-oyz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Description" id="cpT-ka-BGg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EYG-Tz-XWj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKg-Wd-YGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="-93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
