@@ -14,4 +14,6 @@ protocol QuizCollectionViewCellViewModelType {
     var option_3: String? {get}
     var option_4: String? {get}
     var question: String? {get}
+    var priorProbabilities: [Double]? { get }
+    var difficulty: Int { get }
 }

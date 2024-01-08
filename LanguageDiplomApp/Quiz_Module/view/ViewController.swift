@@ -44,8 +44,8 @@ class ViewController: UIViewController {
     
 private extension ViewController {
     func handleQuestionsButtonPress(_ sender : UIButton) {
-        questionCollectionView.viewModel = viewModel?.cellViewModel(.QUESTION)
-        let cellViewModel = questionCollectionView.viewModel
+        questionCollectionView.questionViewModel = viewModel?.cellQuestionViewModel()
+        let cellViewModel = questionCollectionView.questionViewModel
         ResultsService.increaseCounter()
         if let questionText = cellViewModel?.question, !questionText.isEmpty {
             question.text = questionText
@@ -56,8 +56,9 @@ private extension ViewController {
     }
 
     func handleTakeQuizButtonPress(_ sender : UIButton) {
-        questionCollectionView.viewModel = viewModel?.cellViewModel(.QUIZ)
-        let cellViewModel = questionCollectionView.viewModel
+        questionCollectionView.questionViewModel = nil
+        questionCollectionView.quizViewModel = viewModel?.cellQuizViewModel()
+        let cellViewModel = questionCollectionView.quizViewModel
         if let questionText = cellViewModel?.question, !questionText.isEmpty {
             question.text = questionText
         } else {

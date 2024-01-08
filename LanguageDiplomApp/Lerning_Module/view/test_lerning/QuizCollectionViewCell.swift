@@ -38,19 +38,20 @@ class QuizCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var optionD: UIControl!
     
     private var correctAnswer : String?
+    var selectedOptionHandler: ((_ selectedAnswer : Bool) -> Void)?
+
     
-    var vieweModel : QuizCollectionViewCellViewModelType? {
+    var viewModel : QuizCollectionViewCellViewModelType? {
         didSet {
-            self.question.text = vieweModel?.question
-            self.option1.text = vieweModel?.option_1
-            self.option2.text = vieweModel?.option_2
-            self.option3.text = vieweModel?.option_3
-            self.option4.text = vieweModel?.option_4
-            self.correctAnswer = vieweModel?.correct_answer
+            self.question.text = viewModel?.question
+            self.option1.text = viewModel?.option_1
+            self.option2.text = viewModel?.option_2
+            self.option3.text = viewModel?.option_3
+            self.option4.text = viewModel?.option_4
+            self.correctAnswer = viewModel?.correct_answer
         }
     }
-    
-    var selectedOption: ((_ selectedAnswer : Bool) -> Void)?
+        
     
     @objc func changeBorder(_ selectedOption : UIControl) {
         switch selectedOption {
@@ -95,28 +96,28 @@ class QuizCollectionViewCell: UICollectionViewCell {
         var isCorrect = false
         switch selected {
         case .OPTION_A:
-            if(correctAnswer == vieweModel?.option_1) {
+            if(correctAnswer == viewModel?.option_1) {
                 isCorrect = true
             }
-            selectedOption?(isCorrect)
+            selectedOptionHandler?(isCorrect)
             print(isCorrect)
         case .OPTION_B:
-            if(correctAnswer == vieweModel?.option_2) {
+            if(correctAnswer == viewModel?.option_2) {
                 isCorrect = true
             }
-            selectedOption?(isCorrect)
+            selectedOptionHandler?(isCorrect)
             print(isCorrect)
         case .OPTION_C:
-            if(correctAnswer == vieweModel?.option_3) {
+            if(correctAnswer == viewModel?.option_3) {
                 isCorrect = true
             }
-            selectedOption?(isCorrect)
+            selectedOptionHandler?(isCorrect)
             print(isCorrect)
         case .OPTION_D:
-            if(correctAnswer == vieweModel?.option_4) {
+            if(correctAnswer == viewModel?.option_4) {
                 isCorrect = true
             }
-            selectedOption?(isCorrect)
+            selectedOptionHandler?(isCorrect)
             print(isCorrect)
         }
     }

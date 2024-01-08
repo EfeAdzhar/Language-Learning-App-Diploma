@@ -51,6 +51,11 @@
 		B4A21CDE2B4746D800367630 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A21CD22B4746D800367630 /* Movies.storyboard */; };
 		B4A21CE02B4746D800367630 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A21CD42B4746D800367630 /* MovieListTableViewCell.swift */; };
 		B4A21CE12B4746D800367630 /* Description.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A21CD52B4746D800367630 /* Description.storyboard */; };
+		B4A21CE82B49AFC700367630 /* BayesianTestingMethodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A21CE72B49AFC700367630 /* BayesianTestingMethodService.swift */; };
+		B4A21CEA2B49C8A800367630 /* CollectionQuizViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A21CE92B49C8A800367630 /* CollectionQuizViewCellViewModelType.swift */; };
+		B4A21CEC2B49C90800367630 /* CollectionQuestionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A21CEB2B49C90700367630 /* CollectionQuestionViewCellViewModel.swift */; };
+		B4A21CEF2B49DA0200367630 /* BayesianTestingMethodDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A21CEE2B49DA0200367630 /* BayesianTestingMethodDto.swift */; };
+		B4A21CF12B4A190F00367630 /* GenerateProbabilitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A21CF02B4A190F00367630 /* GenerateProbabilitiesService.swift */; };
 		B4AC4C532B1FA88B00172A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AC4C522B1FA88B00172A22 /* AppDelegate.swift */; };
 		B4AC4C552B1FA88B00172A22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AC4C542B1FA88B00172A22 /* SceneDelegate.swift */; };
 		B4AC4C572B1FA88B00172A22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AC4C562B1FA88B00172A22 /* ViewController.swift */; };
@@ -75,10 +80,10 @@
 		B4BFD63F2B3078BF00E8574B /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD63E2B3078BF00E8574B /* QuestionService.swift */; };
 		B4BFD6442B307AEC00E8574B /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD6432B307AEC00E8574B /* QuestionViewModel.swift */; };
 		B4BFD6472B307C7D00E8574B /* QuizViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD6462B307C7D00E8574B /* QuizViewModelType.swift */; };
-		B4BFD6492B307D0500E8574B /* CollectionViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD6482B307D0500E8574B /* CollectionViewCellViewModelType.swift */; };
+		B4BFD6492B307D0500E8574B /* CollectionQuestionViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD6482B307D0500E8574B /* CollectionQuestionViewCellViewModelType.swift */; };
 		B4BFD64B2B3080B900E8574B /* QuizRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD64A2B3080B900E8574B /* QuizRepositoryProtocol.swift */; };
 		B4BFD64E2B30C21300E8574B /* QuizDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD64D2B30C21300E8574B /* QuizDao.swift */; };
-		B4BFD6512B31DB4200E8574B /* CollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD6502B31DB4200E8574B /* CollectionViewCellViewModel.swift */; };
+		B4BFD6512B31DB4200E8574B /* CollectionQuizViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFD6502B31DB4200E8574B /* CollectionQuizViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +148,11 @@
 		B4A21CD22B4746D800367630 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Movies.storyboard; sourceTree = "<group>"; };
 		B4A21CD42B4746D800367630 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		B4A21CD52B4746D800367630 /* Description.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Description.storyboard; sourceTree = "<group>"; };
+		B4A21CE72B49AFC700367630 /* BayesianTestingMethodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayesianTestingMethodService.swift; sourceTree = "<group>"; };
+		B4A21CE92B49C8A800367630 /* CollectionQuizViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionQuizViewCellViewModelType.swift; sourceTree = "<group>"; };
+		B4A21CEB2B49C90700367630 /* CollectionQuestionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionQuestionViewCellViewModel.swift; sourceTree = "<group>"; };
+		B4A21CEE2B49DA0200367630 /* BayesianTestingMethodDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayesianTestingMethodDto.swift; sourceTree = "<group>"; };
+		B4A21CF02B4A190F00367630 /* GenerateProbabilitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateProbabilitiesService.swift; sourceTree = "<group>"; };
 		B4AC4C4F2B1FA88B00172A22 /* LanguageDiplomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageDiplomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AC4C522B1FA88B00172A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4AC4C542B1FA88B00172A22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,10 +181,10 @@
 		B4BFD63E2B3078BF00E8574B /* QuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
 		B4BFD6432B307AEC00E8574B /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		B4BFD6462B307C7D00E8574B /* QuizViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelType.swift; sourceTree = "<group>"; };
-		B4BFD6482B307D0500E8574B /* CollectionViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellViewModelType.swift; sourceTree = "<group>"; };
+		B4BFD6482B307D0500E8574B /* CollectionQuestionViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionQuestionViewCellViewModelType.swift; sourceTree = "<group>"; };
 		B4BFD64A2B3080B900E8574B /* QuizRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryProtocol.swift; sourceTree = "<group>"; };
 		B4BFD64D2B30C21300E8574B /* QuizDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDao.swift; sourceTree = "<group>"; };
-		B4BFD6502B31DB4200E8574B /* CollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		B4BFD6502B31DB4200E8574B /* CollectionQuizViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionQuizViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +451,23 @@
 			path = support_files;
 			sourceTree = "<group>";
 		};
+		B4A21CED2B49D9E000367630 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				B4A21CEE2B49DA0200367630 /* BayesianTestingMethodDto.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		B4A21CF32B4A2BE600367630 /* bayesian_testing_method */ = {
+			isa = PBXGroup;
+			children = (
+				B4A21CED2B49D9E000367630 /* dto */,
+				B4A21CE72B49AFC700367630 /* BayesianTestingMethodService.swift */,
+			);
+			path = bayesian_testing_method;
+			sourceTree = "<group>";
+		};
 		B4AC4C462B1FA88A00172A22 = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +491,7 @@
 		B4AC4C512B1FA88B00172A22 /* LanguageDiplomApp */ = {
 			isa = PBXGroup;
 			children = (
+				B4A21CF32B4A2BE600367630 /* bayesian_testing_method */,
 				B4BFD64C2B30811300E8574B /* supportFiles */,
 				B4A179252B3B5C7700B992F1 /* Lerning_Module */,
 				B4A179182B34A68B00B992F1 /* Registration_Module */,
@@ -540,6 +568,7 @@
 			children = (
 				B4BFD63E2B3078BF00E8574B /* QuestionService.swift */,
 				B4A1791C2B3624AF00B992F1 /* ResultsService.swift */,
+				B4A21CF02B4A190F00367630 /* GenerateProbabilitiesService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -548,9 +577,11 @@
 			isa = PBXGroup;
 			children = (
 				B4BFD6462B307C7D00E8574B /* QuizViewModelType.swift */,
-				B4BFD6482B307D0500E8574B /* CollectionViewCellViewModelType.swift */,
+				B4BFD6482B307D0500E8574B /* CollectionQuestionViewCellViewModelType.swift */,
+				B4A21CE92B49C8A800367630 /* CollectionQuizViewCellViewModelType.swift */,
 				B4BFD6432B307AEC00E8574B /* QuestionViewModel.swift */,
-				B4BFD6502B31DB4200E8574B /* CollectionViewCellViewModel.swift */,
+				B4BFD6502B31DB4200E8574B /* CollectionQuizViewCellViewModel.swift */,
+				B4A21CEB2B49C90700367630 /* CollectionQuestionViewCellViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -713,7 +744,7 @@
 			files = (
 				B4A21CDD2B4746D800367630 /* MovieListTableViewController.swift in Sources */,
 				B4BFD63F2B3078BF00E8574B /* QuestionService.swift in Sources */,
-				B4BFD6512B31DB4200E8574B /* CollectionViewCellViewModel.swift in Sources */,
+				B4BFD6512B31DB4200E8574B /* CollectionQuizViewCellViewModel.swift in Sources */,
 				B4AC4C8B2B2353CD00172A22 /* QuizRepostitory.swift in Sources */,
 				B4A21C972B47412D00367630 /* LearningMenuTableViewCell.swift in Sources */,
 				B47CF0D12B45D4560091EB97 /* ARVisualLerningViewController.swift in Sources */,
@@ -732,9 +763,11 @@
 				B4AC4C8F2B2356C100172A22 /* QuestionProtocol.swift in Sources */,
 				B4A179322B3CCF8400B992F1 /* LerningQuizResultViewController.swift in Sources */,
 				B4A179392B3CD1F800B992F1 /* QuestionsViewModel.swift in Sources */,
+				B4A21CE82B49AFC700367630 /* BayesianTestingMethodService.swift in Sources */,
 				B4A21CAC2B47467300367630 /* MovieViewModel.swift in Sources */,
 				B4BBEA832B3DF157000E4CED /* QuizCollectionViewCellViewModel.swift in Sources */,
 				B4A1791D2B3624AF00B992F1 /* ResultsService.swift in Sources */,
+				B4A21CEF2B49DA0200367630 /* BayesianTestingMethodDto.swift in Sources */,
 				B4AC4C882B21353800172A22 /* Question.swift in Sources */,
 				B4AC4C942B235EF400172A22 /* QuestionCollectionView.swift in Sources */,
 				B4A21CBA2B47468200367630 /* QuestionViewControllerViewModelType.swift in Sources */,
@@ -748,6 +781,7 @@
 				B4A21C9F2B47463B00367630 /* Description.swift in Sources */,
 				B4A21CE02B4746D800367630 /* MovieListTableViewCell.swift in Sources */,
 				B4A21CC02B47468200367630 /* MovieListTableViewViewModelType.swift in Sources */,
+				B4A21CF12B4A190F00367630 /* GenerateProbabilitiesService.swift in Sources */,
 				B4A179342B3CD02D00B992F1 /* QuizCollectionViewCell.swift in Sources */,
 				B4AC4C552B1FA88B00172A22 /* SceneDelegate.swift in Sources */,
 				B4A179302B3CCF6D00B992F1 /* LearningQuizViewController.swift in Sources */,
@@ -755,7 +789,7 @@
 				B4BBEA872B3DF1EC000E4CED /* QuestionViewModelType.swift in Sources */,
 				B4BFD64B2B3080B900E8574B /* QuizRepositoryProtocol.swift in Sources */,
 				B4A21CDA2B4746D800367630 /* DescriptionViewController.swift in Sources */,
-				B4BFD6492B307D0500E8574B /* CollectionViewCellViewModelType.swift in Sources */,
+				B4BFD6492B307D0500E8574B /* CollectionQuestionViewCellViewModelType.swift in Sources */,
 				B4A1792E2B3CCEED00B992F1 /* LearningMenuViewController.swift in Sources */,
 				B4A21CCB2B4746AA00367630 /* GenrasDto.swift in Sources */,
 				B4A179212B3B48B600B992F1 /* RegistrationViewController.swift in Sources */,
@@ -763,9 +797,11 @@
 				B4BFD6472B307C7D00E8574B /* QuizViewModelType.swift in Sources */,
 				B4A21CC52B47469C00367630 /* DescriptionRepository.swift in Sources */,
 				B4A21CBC2B47468200367630 /* UserViewModelType.swift in Sources */,
+				B4A21CEA2B49C8A800367630 /* CollectionQuizViewCellViewModelType.swift in Sources */,
 				B4AC4C982B23638000172A22 /* CollectionViewCell.swift in Sources */,
 				B4A21CBD2B47468200367630 /* CrudProtocol.swift in Sources */,
 				B4A21CA32B47463B00367630 /* Genre.swift in Sources */,
+				B4A21CEC2B49C90800367630 /* CollectionQuestionViewCellViewModel.swift in Sources */,
 				B4A21CCD2B4746B300367630 /* Box.swift in Sources */,
 				B4A21CC72B47469C00367630 /* MovieListRepository.swift in Sources */,
 				B4A21CAE2B47467300367630 /* MovieListViewModel.swift in Sources */,

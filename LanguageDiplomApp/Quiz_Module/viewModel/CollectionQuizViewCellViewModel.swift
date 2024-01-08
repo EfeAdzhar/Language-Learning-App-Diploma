@@ -7,14 +7,14 @@
 
 import Foundation
 
-class CollectionViewCellViewModel : CollectionViewCellViewModelType {
+class CollectionQuizViewCellViewModel : CollectionQuizViewCellViewModelType {
     
-    private var collectionQuiz : QuestionProtocol?
+    private var collectionQuiz : QuizProtocol?
     
-    init(_ collectionQuiz : QuestionProtocol?) {
+    init(_ collectionQuiz : QuizProtocol?) {
         self.collectionQuiz = collectionQuiz
     }
-  
+    
     var selectedIndexRow: IndexPath?
 
     var question: String {
@@ -32,7 +32,7 @@ class CollectionViewCellViewModel : CollectionViewCellViewModelType {
     var answer: String {
         get {
             if(questionType == .QUIZ) {
-                let quiz = collectionQuiz as? QuizProtocol
+                let quiz = collectionQuiz
                 return quiz!.answer
             } else {
                 return ""
@@ -49,6 +49,18 @@ class CollectionViewCellViewModel : CollectionViewCellViewModelType {
     var questionType: QuestionType {
         get {
             return collectionQuiz!.questionType
+        }
+    }
+    
+    var priorProbabilities: [Double]? {
+        get {
+            return collectionQuiz?.priorProbabilities
+        }
+    }
+    
+    var difficulty: Int {
+        get {
+            return collectionQuiz!.difficulty
         }
     }
     

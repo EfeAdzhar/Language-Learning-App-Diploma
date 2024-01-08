@@ -12,6 +12,7 @@ class LearningQuizViewController: UIViewController {
     
     var answerSelected = false
     var isCorrectAnswer = false
+    var dto = BayesianTestingMethodDto()
     var points = 0
     var index = 0
     
@@ -31,6 +32,7 @@ class LearningQuizViewController: UIViewController {
         if(index < viewModel.count() - 1) {
         index += 1
         quizCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .right, animated: true)
+            
         } else {
             let storyBoard: UIStoryboard = UIStoryboard(name: "LearningQuizResult", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "LearningQuizResultViewController") as! LerningQuizResultViewController
@@ -54,15 +56,18 @@ extension LearningQuizViewController : UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as? QuizCollectionViewCell else {return UICollectionViewCell()}
         viewModel.setIndexPath(indexPath)
-        cell.vieweModel = viewModel.quizCollectionViewCellViewModel()
+        cell.viewModel = viewModel.quizCollectionViewCellViewModel()
         cell.optionA.layer.cornerRadius = 5
         cell.optionB.layer.cornerRadius = 5
         cell.optionC.layer.cornerRadius = 5
         cell.optionD.layer.cornerRadius = 5
-        cell.selectedOption = {[weak self] isCorrect in
+        cell.selectedOptionHandler = {[weak self] isCorrect in
             self?.answerSelected = true
             self?.isCorrectAnswer = isCorrect
         }
+        dto.question = cell.viewModel?.question
+        dto.priorProbabilities = cell.viewModel?.priorProbabilities
+        print(dto)
         return cell
     }
 }

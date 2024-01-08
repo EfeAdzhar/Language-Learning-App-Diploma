@@ -13,4 +13,7 @@ struct Quiz : QuizProtocol {
     var answer : String
     var questionType: QuestionType = .QUIZ
     var questionImage: String
+    var priorProbabilities: [Double]
+    var posteriorProbabilities: [Double]?
+    var difficulty: Int
 }

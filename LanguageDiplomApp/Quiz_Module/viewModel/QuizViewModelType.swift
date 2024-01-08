@@ -8,5 +8,6 @@
 import Foundation
 
 protocol QuizViewModelType {
-    func cellViewModel(_ questionType : QuestionType) -> CollectionViewCellViewModelType
+    func cellQuizViewModel() -> CollectionQuizViewCellViewModelType
+    func cellQuestionViewModel() -> CollectionQuestionViewCellViewModelType
 }

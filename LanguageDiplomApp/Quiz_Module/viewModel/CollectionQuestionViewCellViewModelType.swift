@@ -7,12 +7,11 @@
 
 import Foundation
 
-protocol CollectionViewCellViewModelType {
-    var selectedIndexRow : IndexPath? {get}
+protocol CollectionQuestionViewCellViewModelType {
     var question : String {get}
     var answers : Answers {get}
-    var answer : String {get}
-    var questionImage : String {get}
     var questionType : QuestionType {get}
+    var questionImage : String {get}
+    
     func selectedRow(indexPath : IndexPath)
 }

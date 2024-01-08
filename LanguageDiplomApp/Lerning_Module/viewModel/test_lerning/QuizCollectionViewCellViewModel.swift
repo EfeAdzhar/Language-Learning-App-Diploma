@@ -8,6 +8,7 @@
 import Foundation
 
 class QuizCollectionViewCellViewModel : QuizCollectionViewCellViewModelType {
+    
     private var domain : Questions?
     
     init(question : Questions) {
@@ -46,6 +47,18 @@ class QuizCollectionViewCellViewModel : QuizCollectionViewCellViewModelType {
     var question: String? {
         get {
             return self.domain?.question
+        }
+    }
+    
+    var priorProbabilities: [Double]? {
+        get {
+            return self.domain?.priorProbabilities
+        }
+    }
+    
+    var difficulty: Int {
+        get {
+            return self.domain?.difficulty ?? 0
         }
     }
 }

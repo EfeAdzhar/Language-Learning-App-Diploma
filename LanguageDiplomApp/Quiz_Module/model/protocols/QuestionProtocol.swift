@@ -16,4 +16,7 @@ protocol QuestionProtocol {
 
 protocol QuizProtocol : QuestionProtocol {
     var answer : String {get}
+    var priorProbabilities: [Double] {get set}
+    var posteriorProbabilities: [Double]? {get}
+    var difficulty: Int { get }
 }

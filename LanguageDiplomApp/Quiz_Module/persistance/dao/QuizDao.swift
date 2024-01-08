@@ -9,11 +9,12 @@ import Foundation
 
 class QuizDao {
     private var questions : [QuestionProtocol] = []
-    private var quizes : [QuizProtocol] = []
+    private var quizzes : [QuizProtocol] = []
     
     init() {
         self.questions = questionDB()
-        self.quizes = quizDB()
+        self.quizzes = quizDB()
+        print(quizzes)
     }
     
     func getQuestion() -> Optional<QuestionProtocol> {
@@ -21,7 +22,7 @@ class QuizDao {
     }
     
     func getQuiz() -> Optional<QuizProtocol> {
-        return Optional.some(quizes.remove(at: 0))
+        return Optional.some(quizzes.remove(at: 0))
     }
     
     func questionDbStorage() -> Int {
@@ -30,7 +31,7 @@ class QuizDao {
     }
     
     func quizDbStorage() -> Int {
-        return quizes.count
+        return quizzes.count
     }
     
     private func questionDB() -> [QuestionProtocol] {
@@ -71,47 +72,90 @@ class QuizDao {
     }
     
     private func quizDB() -> [QuizProtocol] {
-        return [
+        var quizArray = [
             Quiz(
                 question: "Her hands ___ small.?",
                 answers: Answers(answers: ["has very", "very", "are very", "is very"]),
-                answer: "are very", questionImage: "IMAGE MUST BE HERE"),
+                answer: "are very",
+                questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 1),
             Quiz(
                 question: "Which is correct?",
                 answers: Answers(answers: ["Today it sunny", "It sunny today", "It has sunny today", "It is sunny today"]),
-                answer: "It is sunny today", questionImage: "IMAGE MUST BE HERE"),
+                answer: "It is sunny today",
+                questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 1),
             Quiz(
                 question: "My brother ___ in an office",
                 answers: Answers(answers: ["hasn't work", "doesn't work", "don't work", "isn't work"]),
-                answer: "doesn't work", questionImage: "IMAGE MUST BE HERE"),
+                answer: "doesn't work",
+                questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 2),
             Quiz(
                 question: "How much ___ tomatoes?",
                 answers: Answers(answers: ["are a", "is a", "are the", "is the"]),
-                answer: "are the", questionImage: "IMAGE MUST BE HERE"),
+                answer: "are the",
+                questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 2),
             Quiz(
                 question: "Lina's food is ___.",
                 answers: Answers(answers: ["very saltily", "very salty", "very salt", "verily salty"]),
-                answer: "very salty", questionImage: "IMAGE MUST BE HERE"),
+                answer: "very salty",
+                questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 1),
             Quiz(
                 question: "Where are you? I ___ all day.",
                 answers: Answers(answers: ["been waiting", "have been waiting", "am waiting", "wait"]),
-                answer: "have been waiting", questionImage: "IMAGE MUST BE HERE"),
+                answer: "have been waiting",
+                questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 3),
             Quiz(
                 question: "The Buchwalds ___ live in this neighborhood. They moved away 6 months ago.",
                 answers: Answers(answers: ["are used to", "have used to", "used to", "were use to"]),
-                answer: "used to", questionImage: "IMAGE MUST BE HERE"),
+                answer: "used to",
+                questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 5),
             Quiz(
                 question: "Can you open the door, please? It ___ be Izzy. She said she would come by.",
                 answers: Answers(answers: ["can't", "would be", "mustn't", "must"]),
-                answer: "must", questionImage: "IMAGE MUST BE HERE"),
+                answer: "must", questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 4),
             
             Quiz(
                 question: "___ that the volcano has stopped erupting.",
                 answers: Answers(answers: ["Reporting", "It was reported", "It be reported", "There was report"]),
-                answer: "It was reported", questionImage: "IMAGE MUST BE HERE"),
+                answer: "It was reported", questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 5),
             Quiz(
                 question: "___ to take an earlier flight, they would need to call us immediately.",
                 answers: Answers(answers: ["Would they decide", "They should decide", "Should they decide", "In case decide"]),
-                answer: "Should they decide", questionImage: "IMAGE MUST BE HERE")]
+                answer: "Should they decide", questionImage: "IMAGE MUST BE HERE",
+                priorProbabilities: [0.25, 0.25, 0.25, 0.25],
+                posteriorProbabilities: nil,
+                difficulty: 5)]
+        
+        for i in quizArray.indices {
+            quizArray[i].priorProbabilities = GenerateProbabilitiesService.generateQuizzesProbabilities(for: quizArray[i])
+        }
+        print(quizArray)
+        return quizArray
     }
 }

@@ -18,4 +18,7 @@ struct Questions: Codable {
     var option_3: String?
     var option_4: String?
     var question: String?
+    var priorProbabilities: [Double]?
+    var posteriorProbabilities: [Double]?
+    var difficulty: Int?
 }
